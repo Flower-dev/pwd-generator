@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <section class="container">
+      <div class="title-section">
+        <i data-lucide="key-round" class="key"></i>
+        <h1>Password Generator</h1>
+      </div>
+      <label>Number of password segments</label>
+      <div class="toggle-tab">
+        <button class="tab" data-value="1">1</button>
+        <button class="tab" data-value="2">2</button>
+        <button class="tab active" data-value="3">3</button>
+        <button class="tab" data-value="4">4</button>
+      </div>
+      <button class="generate-button" id="generate">Generate Password</button>
+      <div id="password-container">
+        <div id="password"></div>
+        <i
+          data-lucide="copy"
+          class="icon"
+          id="copy-icon"
+          title="Copy to clipboard"
+        ></i>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
