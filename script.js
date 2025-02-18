@@ -25,8 +25,7 @@ function generatePassword(segments) {
   const numberPos = Math.floor(Math.random() * segments);
   const uppercasePos = Math.floor(Math.random() * segments);
 
-  // Pick a random position
-  const randomIndex = Math.floor(Math.random() * segment.length);
+  
 
   // Function to create a single segment of the password
   const createSegment = (index) => {
@@ -39,6 +38,9 @@ function generatePassword(segments) {
       getRandomChar("consonants"),
     ].join("");
 
+    // Pick a random position
+    const randomIndex = Math.floor(Math.random() * segment.length);
+    
     if (index === numberPos) {
       segment =
         segment.slice(0, randomIndex) + // Characters before the random index
@@ -47,6 +49,7 @@ function generatePassword(segments) {
     }
 
     if (index === uppercasePos)
+      
       segment =
         segment.slice(0, randomIndex) +
         segment[randomIndex].toUpperCase() +
